@@ -32,13 +32,12 @@ Route::get('/', function (Request $request) {
 
 Route::get("/do_scan", function () {
     // do an http request to an external service to get scan data
-    
     $res = Http::get('http://localhost:8080/api/v1/customers');
 
     $resStatus = $res->status();
 
     if($resStatus != 200) {
-        return redirect("/do_scan")->withErrors(['msg' => 'Failed to fetch scan data.']);
+        return redirect("/")->withErrors(['msg' => 'Failed to fetch scan data.']);
     }
 
     $resJson = $res->json();
