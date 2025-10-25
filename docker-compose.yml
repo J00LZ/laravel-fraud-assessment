@@ -1,0 +1,5 @@
+services:
+  customer_api:
+    image: vzdeveloper/customers-api
+    ports:
+      - "8080:80"

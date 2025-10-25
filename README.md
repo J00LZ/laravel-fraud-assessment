@@ -3,8 +3,9 @@ By Julius de Jeu
 
 ## Running the example
 * Make sure that all the requirements for laravel are installed (see [this page](https://laravel.com/docs/12.x/installation))
-* Run the `customers-api` docker container with it exposed at port `8080`
+* Run `docker compose up -d` to start the `customers-api`
 * Run `composer install` to install the required dependencies. 
+* Run `php artisan migrate` to create all the tables
 * Copy the `.env.example` file to `.env` and set the `APP_KEY` variable to a valid value (can be generated with `php artisan key:generate`)
 * Execute `composer run dev` to run the development environment
 * Go to http://localhost:8000
